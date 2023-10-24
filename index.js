@@ -58,16 +58,14 @@ app.get('/modulo/:input1/:input2', function (req, res) {
 
   app.get('/asynctest/', function (req, res) {
   
-    asyncmod.loadDistantFile('./todos.json').then(function (content) {
+    asyncmod.loadDistantFile('./todos.json')
+    .then(function (content) {
         console.info('Fichier chargé !');
-        res.send(content);
+        res.json(content);
       }).catch(function (err) {
-        console.error('Erreur !');
+        console.error('Erreur catch loadDistance!');
         console.dir(err);
       });
-      
-  
-    
   });
 
 app.listen(3000, function () {

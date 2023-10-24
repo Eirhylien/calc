@@ -2,9 +2,9 @@ let fs = require('node:fs/promises');
 
 const json = response => Promise.resolve(JSON.parse(response));
 
-function loadDistantFile(jsonData) {
+function loadDistantFile(jsonDataURL) {
     return new Promise(function (resolve, reject) {
-        fs.readFile(jsonData)
+        fs.readFile(jsonDataURL)
             .then(json)
             .then(data => {
                 console.log('Request succeeded with JSON response', data)
