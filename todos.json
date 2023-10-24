@@ -1,0 +1,20 @@
+{
+    "tasks":[
+        {
+            "order":1,
+            "name":"acheter pastèques",
+            "done":false
+        },
+        {
+            "order":2,
+            "name":"réparer voiture",
+            "done":true
+        },
+        {
+            "order":3,
+            "name":"sortir le chien",
+            "done":false
+        }
+    ]
+
+}
